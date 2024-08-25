@@ -1,3 +1,9 @@
+<div>
+  <form [formGroup]="search">
+    <label for="id">Search</label>
+    <input id="id" formControlName="name">
+  </form>
+</div>
 <div class="table-responsive">
 <!--  [value]="getProduct()"-->
   <p-table
@@ -18,7 +24,7 @@
       <tr>
         <th><i class="pi pi-file"></i></th>
         <th pSortableColumn="client.nom" style="font-size: 12px">Client<p-sortIcon field="client.nom"></p-sortIcon></th>
-        <th pSortableColumn="topSelling.uname" style="font-size: 12px">Produits<p-sortIcon field="topSelling.uname"></p-sortIcon></th>
+        <th pSortableColumn="product.uname" style="font-size: 12px">Produits<p-sortIcon field="product.uname"></p-sortIcon></th>
         <th pSortableColumn="nom" style="font-size: 12px">Qté</th>
         <th style="font-size: 12px">Total HT</th>
         <th style="font-size: 12px">Reduction</th>
