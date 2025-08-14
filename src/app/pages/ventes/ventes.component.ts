@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   selector: 'app-ventes',
   templateUrl: './ventes.component.html',
   styleUrls: ['./ventes.component.scss'],
+  standalone: true,
   encapsulation: ViewEncapsulation.None
 })
 export class VentesComponent {
@@ -63,7 +64,7 @@ export class VentesComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
     if (!this.mpForm.valid) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
       return;
@@ -74,7 +75,7 @@ export class VentesComponent {
     let pTraitement: Promise<any>;
 
     const data = { ...this.mpForm.value, ...{ pv: this.pv.id } };
-    if (this.vente.id) { // Mode modif            
+    if (this.vente.id) { // Mode modif
       pTraitement = this.dataRestService.update({ ...data, ...{ id: this.vente.id } }, '', this.sModelName);
     } else {
       // Mode enregistrement

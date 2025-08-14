@@ -9,7 +9,8 @@ import { ProformasService } from "../../service/proformas.service";
 @Component({
   selector: 'app-proforma',
   templateUrl: './proformas.component.html',
-  styleUrls: ['./proformas.component.scss']
+  styleUrls: ['./proformas.component.scss'],
+  standalone: true,
 })
 export class ProformasComponent {
   [x: string]: any;

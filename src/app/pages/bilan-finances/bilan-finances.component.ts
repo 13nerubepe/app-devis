@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
   selector: 'app-bilan-finances',
   templateUrl: './bilan-finances.component.html',
   styleUrls: ['./bilan-finances.component.scss'],
+  standalone: true,
   encapsulation: ViewEncapsulation.None
 })
 export class BilanFinancesComponent {
@@ -74,7 +75,7 @@ export class BilanFinancesComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
     if (!this.mpForm.valid) {
       Swal.fire("Renseigner tous les champs", "", "warning").then();
       return;
@@ -83,7 +84,7 @@ export class BilanFinancesComponent {
     this.saving = true;
     // Traitement
     let pTraitement: Promise<any>;
-    if (this.mpForm.value.id) { // Mode modif      
+    if (this.mpForm.value.id) { // Mode modif
       pTraitement = this.dataRestService.update(this.mpForm.value, "", this.sModelName);
     } else { // Mode enregistrement
       pTraitement = this.dataRestService.save(this.sModelName, this.mpForm.value);

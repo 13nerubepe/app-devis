@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   selector: 'app-client',
   templateUrl: './client.component.html',
   styleUrls: ['./client.component.scss'],
+  standalone: true,
   encapsulation: ViewEncapsulation.None
 })
 export class ClientComponent {

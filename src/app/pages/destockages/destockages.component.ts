@@ -9,7 +9,8 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-destockages',
   templateUrl: './destockages.component.html',
-  styleUrls: ['./destockages.component.scss']
+  styleUrls: ['./destockages.component.scss'],
+  standalone: true,
 })
 export class DestokagesComponent {
   [x: string]: any;
@@ -73,7 +74,7 @@ export class DestokagesComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
     if (!this.mpForm.valid) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
       return;
@@ -84,7 +85,7 @@ export class DestokagesComponent {
     let pTraitement: Promise<any>;
 
     const data = { ...this.mpForm.value, ...{ pv: this.pv.id, user: this.user.id } };
-    if (this.destockage.id) { // Mode modif            
+    if (this.destockage.id) { // Mode modif
       pTraitement = this.dataRestService.update({ ...data, ...{ id: this.destockage.id } }, '', this.sModelName);
     } else {
       // Mode enregistrement

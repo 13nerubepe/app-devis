@@ -38,7 +38,8 @@ export type salesChartOptions = {
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  standalone: true,
 })
 export class DashboardComponent {
   @ViewChild("chart") chart: ChartComponent = Object.create(null);

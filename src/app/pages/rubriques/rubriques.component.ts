@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
   selector: 'app-timetable',
   templateUrl: './rubriques.component.html',
   styleUrls: ['./rubriques.component.scss'],
+  standalone: true,
   encapsulation: ViewEncapsulation.None
 })
 export class RubriquesComponent {
@@ -52,7 +53,7 @@ export class RubriquesComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
 
     if (!this.mpForm.valid) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
@@ -64,7 +65,7 @@ export class RubriquesComponent {
     let pTraitement: Promise<any>;
     const value = { ...this.rubrique, ...this.mpForm.value };
 
-    if (value.id) { // Mode modif      
+    if (value.id) { // Mode modif
       pTraitement = this.dataRestService.update(value, '', this.sModelName);
     } else { // Mode enregistrement
       pTraitement = this.dataRestService.save(this.sModelName, value);

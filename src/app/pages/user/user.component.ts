@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
+  standalone: true,
   encapsulation: ViewEncapsulation.None
 })
 export class UserComponent {

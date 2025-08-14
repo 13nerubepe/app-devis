@@ -8,7 +8,8 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-bilan-ventes',
   templateUrl: './bilan-ventes.component.html',
-  styleUrls: ['./bilan-ventes.component.scss']
+  styleUrls: ['./bilan-ventes.component.scss'],
+  standalone: true,
 })
 export class BilanVenteComponent {
   [x: string]: any;
@@ -66,7 +67,7 @@ export class BilanVenteComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
     if (!this.mpForm.valid) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
       return;
@@ -75,7 +76,7 @@ export class BilanVenteComponent {
     this.saving = true;
     // Traitement
     let pTraitement: Promise<any>;
-    if (this.mpForm.value.id) { // Mode modif      
+    if (this.mpForm.value.id) { // Mode modif
       pTraitement = this.dataRestService.update(this.mpForm.value, '', this.sModelName);
     } else { // Mode enregistrement
       pTraitement = this.dataRestService.save(this.sModelName, this.mpForm.value);

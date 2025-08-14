@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
   selector: 'app-approvisionnements',
   templateUrl: './approvisionnements.component.html',
   styleUrls: ['./approvisionnements.component.scss'],
+  standalone: true,
   encapsulation: ViewEncapsulation.None
 })
 export class ApprovisionnementsComponent {
@@ -74,7 +75,7 @@ export class ApprovisionnementsComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
     if (!this.mpForm.valid) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
       return;
@@ -85,7 +86,7 @@ export class ApprovisionnementsComponent {
     let pTraitement: Promise<any>;
 
     const data = { ...this.mpForm.value, ...{ pv: this.pv.id } };
-    if (this.approvisionnement.id) { // Mode modif            
+    if (this.approvisionnement.id) { // Mode modif
       pTraitement = this.dataRestService.update({ ...data, ...{ id: this.approvisionnement.id } }, '', this.sModelName);
     } else {
       // Mode enregistrement

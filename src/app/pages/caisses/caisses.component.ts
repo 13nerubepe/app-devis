@@ -14,6 +14,7 @@ import Swal from 'sweetalert2';
   selector: 'app-caisses',
   templateUrl: './caisses.component.html',
   styleUrls: ['./caisses.component.scss'],
+  standalone: true,
   encapsulation: ViewEncapsulation.None
 })
 export class CaissesComponent {
@@ -385,7 +386,7 @@ export class CaissesComponent {
     data.total = this.cartSummary.totalPrice;
     data.totalPayer = this.currentNumber;
 
-    // Vérifications     
+    // Vérifications
     if (commandes.length === 0) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
       return;

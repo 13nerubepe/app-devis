@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
   selector: 'app-audits',
   templateUrl: './audits.component.html',
   styleUrls: ['./audits.component.scss'],
+  standalone: true,
   encapsulation: ViewEncapsulation.None
 })
 export class AuditsComponent {
@@ -72,7 +73,7 @@ export class AuditsComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
     if (!this.mpForm.valid) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
       return;

@@ -82,23 +82,23 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-12 mb-3">
-                        <div class="form-group">
-                            <label class="control-label" for="sexe">
-                                Audit
-                                <span class="red">*</span>
-                            </label>
-                            <ng-select id="produit" formControlName="audit">
-                                <ng-option value="" selected>--Sélectionner un produit--</ng-option>
-                                <ng-option *ngFor="let audit of audits" [value]="audit.id">{{ 'Audit du' +
-                                    audit.dateCreation | date : "dd MMMM YYYY" }}</ng-option>
-                            </ng-select>
-                        </div>
+<!--                        <div class="form-group">-->
+<!--                            <label class="control-label" for="sexe">-->
+<!--                                Audit-->
+<!--                                <span class="red">*</span>-->
+<!--                            </label>-->
+<!--                            <ng-select id="produit" formControlName="audit">-->
+<!--                                <ng-option value="" selected>&#45;&#45;Sélectionner un produit&#45;&#45;</ng-option>-->
+<!--                                <ng-option *ngFor="let audit of audits" [value]="audit.id">{{ 'Audit du' +-->
+<!--                                    audit.dateCreation | date : "dd MMMM YYYY" }}</ng-option>-->
+<!--                            </ng-select>-->
+<!--                        </div>-->
                     </div>
                     <div class="form-group col-12 mb-3">
-                        <label class="control-label" for="sexe">
-                            Produit
-                            <span class="red">*</span>
-                        </label>
+<!--                        <label class="control-label" for="sexe">-->
+<!--                            Produit-->
+<!--                            <span class="red">*</span>-->
+<!--                        </label>-->
                         <ng-select id="produit" formControlName="produit" (change)="chargeQteConstate($event)">
                             <ng-option value="" selected>--Sélectionner un produit--</ng-option>
                             <ng-option *ngFor="let produit of produits" [value]="produit.id">{{ produit.libelle
@@ -107,13 +107,13 @@
                     </div>
                     <div class="form-group col-4 mb-3">
                         <label for="inventaire-qte">Quantité Contatée <span class="red">*</span></label>
-                        <input type="number" id="inventaire-qte" class="form-control" formControlName="quantiteC"
-                            placeholder="Quantité" />
+<!--                        <input type="number" id="inventaire-qte" class="form-control" formControlName="quantiteC"-->
+<!--                            placeholder="Quantité" />-->
                     </div>
                     <div class="form-group col-4 mb-3">
                         <label for="inventaire-qte">Quantité Attendu <span class="red">*</span></label>
-                        <input type="number" id="inventaire-qte" class="form-control" formControlName="quantiteA"
-                            placeholder="Quantité" (input)="updateDiffQte($event)" />
+<!--                        <input type="number" id="inventaire-qte" class="form-control" formControlName="quantiteA"-->
+<!--                            placeholder="Quantité" (input)="updateDiffQte($event)" />-->
                     </div>
                     <div class="form-group col-4 mb-3">
                         <label for="inventaire-qte">Difference <span class="red">*</span></label>

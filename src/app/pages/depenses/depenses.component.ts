@@ -9,7 +9,8 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-depenses',
   templateUrl: './depenses.component.html',
-  styleUrls: ['./depenses.component.scss']
+  styleUrls: ['./depenses.component.scss'],
+  standalone: true,
 })
 export class DepensesComponent {
   [x: string]: any;
@@ -70,7 +71,7 @@ export class DepensesComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
     if (!this.mpForm.valid) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
       return;
@@ -81,7 +82,7 @@ export class DepensesComponent {
     let pTraitement: Promise<any>;
     const value = { ...this.depense, ...this.mpForm.value };
 
-    if (value.id) { // Mode modif      
+    if (value.id) { // Mode modif
       pTraitement = this.dataRestService.update(value, '', this.sModelName);
     } else { // Mode enregistrement
       pTraitement = this.dataRestService.save(this.sModelName, value);

@@ -13,100 +13,11 @@ import { ProformasService } from "../../service/proformas.service";
   selector: 'app-produits',
   templateUrl: './produits.component.html',
   styleUrls: ['./produits.component.scss'],
+  standalone: true,
 })
 export class ProduitsComponent {
   [x: string]: any;
-  produits: Product[] = [
-  //   {
-  //     productId: "1",
-  //     image: 'assets/images/users/silhoutte-homme.png',
-  //     libelle: 'Hanna Gover',
-  //     description: 'Flexy React',
-  //     prixUnitaire: 35,
-  //     qteenstock: 95,
-  //     categories: 34,
-  //   },
-  //   {
-  //     productId: "2",
-  //   image: 'assets/images/users/silhoutte-homme.png',
-  //   libelle: 'Hanna Gover',
-  //   description: 'Flexy React',
-  //   prixUnitaire: 35,
-  //   qteenstock: 95,
-  //   categories: 34,
-  //   },
-  //   {
-  //     productId: "3",
-  //   image: 'assets/images/users/silhoutte-homme.png',
-  //   libelle: 'Hanna Gover',
-  //   description: 'Flexy React',
-  //   prixUnitaire: 35,
-  //   qteenstock: 95,
-  //   categories: 34,
-  //   },
-  //   {
-  //     productId: "4",
-  //   image: 'assets/images/users/silhoutte-homme.png',
-  // libelle: 'Hanna Gover',
-  // description: 'Flexy React',
-  // prixUnitaire: 35,
-  // qteenstock: 95,
-  // categories: 34,
-  // },
-  //   {
-  //     productId: "5",
-  // image: 'assets/images/users/silhoutte-homme.png',
-  // libelle: 'Hanna Gover',
-  // description: 'Flexy React',
-  // prixUnitaire: 35,
-  // qteenstock: 95,
-  // categories: 34,
-  // },
-  //   {
-  //     productId: "6",
-  // image: 'assets/images/users/silhoutte-homme.png',
-  // libelle: 'Hanna Gover',
-  // description: 'Flexy React',
-  // prixUnitaire: 35,
-  // qteenstock: 95,
-  // categories: 34,
-  // },
-  //   {
-  //     productId: "7",
-  // image: 'assets/images/users/silhoutte-homme.png',
-  // libelle: 'Hanna Gover',
-  // description: 'Flexy React',
-  // prixUnitaire: 35,
-  // qteenstock: 95,
-  // categories: 34,
-  // }
-  ];
-  // clients: Client[] = [
-  //   {
-  //     clientId: "1",
-  //     nom: "John",
-  //     produits: [
-  //       {
-  //         productId: "1",
-  //         image: 'assets/images/users/silhoutte-homme.png',
-  //         libelle: 'Hanna Gover',
-  //         description: 'Flexy React',
-  //         prixUnitaire: 35,
-  //         qteenstock: 95,
-  //         categories: 34,
-  //       },
-  //       {
-  //         productId: "1",
-  //         image: 'assets/images/users/silhoutte-homme.png',
-  //         libelle: 'Hanna Gover',
-  //         description: 'Flexy React',
-  //         prixUnitaire: 35,
-  //         qteenstock: 95,
-  //         categories: 34,
-  //       },
-  //     ]
-  //   }
-  // ]
+  produits: Product[] = []
   _produits: any[] = [];
   categories: any[] = [];
   pv: any = {};

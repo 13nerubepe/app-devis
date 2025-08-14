@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
   selector: 'app-commandes',
   templateUrl: './commandes.component.html',
   styleUrls: ['./commandes.component.scss'],
+  standalone: true,
 })
 export class CommandesComponent {
   [x: string]: any;

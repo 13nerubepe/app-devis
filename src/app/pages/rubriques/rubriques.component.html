@@ -10,7 +10,7 @@
         </button>
       </div>
     </div>
-  
+
     <div class="row">
       <div class="col-md-12">
         <div class="table-pane table-responsive">
@@ -58,46 +58,46 @@
         </div>
       </div>
     </div>
-  
-    <ng-template #ngModal class="modal show" tabindex="-1" role="dialog" data-backdrop="static" *ngIf="true">
-      <form class="modal-content text-dark" [formGroup]="mpForm" (ngSubmit)="onFormSubmit()">
-        <div class="modal-header">
-          <h5 *ngIf="!rubrique.id" class="modal-title">Ajouter une rubrique</h5>
-          <h5 *ngIf="rubrique.id" class="modal-title">Modifier la rubrique ({{rubrique?.nom}})</h5>
-          <button type="button" class="close align-items-center text-white font-weight-bold bg-danger" aria-label="Close"
-            (click)="closeModal()">
-            <i class="bi bi-x"></i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="form-group col-12 mb-3">
-              <label for="rubrique-nom">Titre</label>
-              <input type="text" id="rubrique-nom" class="form-control" formControlName="nom" placeholder="Titre" />
-            </div>
-            <div class="form-group col-12 mb-3">
-              <label for="rubrique-description">Description</label>
-              <textarea id="rubrique-description" class="form-control" formControlName="description" cols="30" rows="5"
-                placeholder="Description..."></textarea>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary mr-2" (click)="closeModal()">
-            Fermer
-          </button>
-          <button *ngIf="saving" type="button" class="btn btn-success" disabled type="submit">
-            <i class="bi bi-save"></i>
-            Enregistrement
-          </button>
-          <button *ngIf="!saving" type="button" class="btn btn-success" type="submit">
-            <i class="bi bi-save"></i>
-            Enregistrer
-          </button>
-        </div>
-      </form>
-    </ng-template>
+
+<!--    <ng-template #ngModal class="modal show" tabindex="-1" role="dialog" data-backdrop="static" *ngIf="true">-->
+<!--      <form class="modal-content text-dark" [formGroup]="mpForm" (ngSubmit)="onFormSubmit()">-->
+<!--        <div class="modal-header">-->
+<!--          <h5 *ngIf="!rubrique.id" class="modal-title">Ajouter une rubrique</h5>-->
+<!--          <h5 *ngIf="rubrique.id" class="modal-title">Modifier la rubrique ({{rubrique?.nom}})</h5>-->
+<!--          <button type="button" class="close align-items-center text-white font-weight-bold bg-danger" aria-label="Close"-->
+<!--            (click)="closeModal()">-->
+<!--            <i class="bi bi-x"></i>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        <div class="modal-body">-->
+<!--          <div class="row">-->
+<!--            <div class="form-group col-12 mb-3">-->
+<!--              <label for="rubrique-nom">Titre</label>-->
+<!--              <input type="text" id="rubrique-nom" class="form-control" formControlName="nom" placeholder="Titre" />-->
+<!--            </div>-->
+<!--            <div class="form-group col-12 mb-3">-->
+<!--              <label for="rubrique-description">Description</label>-->
+<!--              <textarea id="rubrique-description" class="form-control" formControlName="description" cols="30" rows="5"-->
+<!--                placeholder="Description..."></textarea>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--          <button type="button" class="btn btn-secondary mr-2" (click)="closeModal()">-->
+<!--            Fermer-->
+<!--          </button>-->
+<!--          <button *ngIf="saving" type="button" class="btn btn-success" disabled type="submit">-->
+<!--            <i class="bi bi-save"></i>-->
+<!--            Enregistrement-->
+<!--          </button>-->
+<!--          <button *ngIf="!saving" type="button" class="btn btn-success" type="submit">-->
+<!--            <i class="bi bi-save"></i>-->
+<!--            Enregistrer-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </form>-->
+<!--    </ng-template>-->
   </main>
-  
-  
-  <app-spinner *ngIf="loading" [loading]="loading"></app-spinner>
+
+
+<!--  <app-spinner *ngIf="loading" [loading]="loading"></app-spinner>-->

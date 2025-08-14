@@ -8,7 +8,8 @@ import Swal from 'sweetalert2';
 @Component({
   selector: 'app-categorie',
   templateUrl: './categorie.component.html',
-  styleUrls: ['./categorie.component.scss']
+  styleUrls: ['./categorie.component.scss'],
+  standalone: true,
 })
 export class CategorieComponent {
   [x: string]: any;
@@ -65,7 +66,7 @@ export class CategorieComponent {
 
   async onFormSubmit() {
     event?.preventDefault();
-    // Vérifications     
+    // Vérifications
     if (!this.mpForm.valid) {
       Swal.fire('Renseigner tous les champs', '', 'warning').then();
       return;
@@ -77,7 +78,7 @@ export class CategorieComponent {
 
     const value = { ...this.categorie, ...this.mpForm.value, ...{ pv: this.pv.id } };
 
-    if (value.id) { // Mode modif      
+    if (value.id) { // Mode modif
       pTraitement = this.dataRestService.update(value, '', this.sModelName);
     } else { // Mode enregistrement
       pTraitement = this.dataRestService.save(this.sModelName, value);

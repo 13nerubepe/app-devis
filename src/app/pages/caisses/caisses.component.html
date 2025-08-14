@@ -1,43 +1,43 @@
 <header class="topbar bg-gradient container-fluid " style="background-color: #4A575D; height: 80px;">
-    <nav class="top-navbar navbar-expand-lg navbar-dark">
-        <div class="navbar-header d-flex justify-content-between align-items-center" [ngClass]="'expand-logo'"
-            data-logobg="skin6">
-            <app-list-point-vente class="w-25"></app-list-point-vente>
+<!--    <nav class="top-navbar navbar-expand-lg navbar-dark">-->
+<!--        <div class="navbar-header d-flex justify-content-between align-items-center" [ngClass]="'expand-logo'"-->
+<!--            data-logobg="skin6">-->
+<!--            <app-list-point-vente class="w-25"></app-list-point-vente>-->
 
-            <ul class="navbar-nav float-right  d-flex justify-content-between align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="'/admin/categories'">ADMIN</a>
-                </li>
-                <li class="nav-item" (click)="showModal(false)" style="cursor: pointer;">
-                    <a class="nav-link">COMMANDES</a>
-                </li>
-                <li class="nav-item" (click)="showModal(true)" style="cursor: pointer;">
-                    <a class="nav-link">PROFORMAS</a>
-                </li>
-            </ul>
+<!--            <ul class="navbar-nav float-right  d-flex justify-content-between align-items-center">-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" [routerLink]="'/admin/categories'">ADMIN</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item" (click)="showModal(false)" style="cursor: pointer;">-->
+<!--                    <a class="nav-link">COMMANDES</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item" (click)="showModal(true)" style="cursor: pointer;">-->
+<!--                    <a class="nav-link">PROFORMAS</a>-->
+<!--                </li>-->
+<!--            </ul>-->
 
-            <div class="input search-container my-3 col-4">
-                <form (submit)="searchProd($event, target)" class="form-inline ml-3 bloc-search w-100">
-                    <div class="input-group input-group-sm" style="flex-wrap: nowrap">
-                        <input #target class="form-control form-control-navbar" type="search"
-                            placeholder="Filtrer les produits..." aria-label="Search" [value]="searchString"
-                            (input)="searchProd($event, target)" style="border-top-left-radius: 7px;
-                            border-bottom-left-radius: 7px; padding: 20px;">
-                        <div class="input-group-append" style="display: flex;">
-                            <button class="btn btn-navbar filter-btn bg-primary-gest text-white" type="submit" style="border-top-right-radius: 7px !important;
-                            border-bottom-right-radius: 7px !important;
-                            font-weight: 700;
-                            padding: 8px;
-                            border-radius: 0;">
-                                <span><i class="bi bi-search" aria-hidden="true"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <app-navigation></app-navigation>
-        </div>
-    </nav>
+<!--            <div class="input search-container my-3 col-4">-->
+<!--                <form (submit)="searchProd($event, target)" class="form-inline ml-3 bloc-search w-100">-->
+<!--                    <div class="input-group input-group-sm" style="flex-wrap: nowrap">-->
+<!--                        <input #target class="form-control form-control-navbar" type="search"-->
+<!--                            placeholder="Filtrer les produits..." aria-label="Search" [value]="searchString"-->
+<!--                            (input)="searchProd($event, target)" style="border-top-left-radius: 7px;-->
+<!--                            border-bottom-left-radius: 7px; padding: 20px;">-->
+<!--                        <div class="input-group-append" style="display: flex;">-->
+<!--                            <button class="btn btn-navbar filter-btn bg-primary-gest text-white" type="submit" style="border-top-right-radius: 7px !important;-->
+<!--                            border-bottom-right-radius: 7px !important;-->
+<!--                            font-weight: 700;-->
+<!--                            padding: 8px;-->
+<!--                            border-radius: 0;">-->
+<!--                                <span><i class="bi bi-search" aria-hidden="true"></i></span>-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            <app-navigation></app-navigation>-->
+<!--        </div>-->
+<!--    </nav>-->
 </header>
 
 <main *ngIf="!loading" class="container-fluid pv-caisse">
@@ -112,26 +112,26 @@
             <div class="categorie d-b d-flex">
                 <span class="btn-control control-left" (click)="scrollCategories('left')"><i class="bi bi-chevron-left"
                         aria-hidden="true"></i></span>
-                <div *ngIf="(categories && categories[0])" #categoryContainerTop class="categorie-produit">
-                    <div *ngFor="let category of categories" class="cat d-flex float-left categorie-produit__card"
-                        [ngClass]="{'selected': selectedCategory === category.id}"
-                        (click)="setSelectedCategory(category.id)">
-                        <div class="cat-img img">
-                            <div class="cat-img-abp img">
-                                <img [src]="category?.produits[0]?.image || 'assets/images/logos/logo.jpg'"
-                                    style="width: 100%;" />
-                            </div>
-                        </div>
-                        <div class="info-info">
-                            <h4 class="title-cat">
-                                <span [innerHTML]="category.nom"></span>
-                            </h4>
-                            <div class="desc-cat" style="text-align: left;">{{ category?.produits.length }}
-                                Variétés
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--                <div *ngIf="(categories && categories[0])" #categoryContainerTop class="categorie-produit">-->
+<!--                    <div *ngFor="let category of categories" class="cat d-flex float-left categorie-produit__card"-->
+<!--                        [ngClass]="{'selected': selectedCategory === category.id}"-->
+<!--                        (click)="setSelectedCategory(category.id)">-->
+<!--                        <div class="cat-img img">-->
+<!--                            <div class="cat-img-abp img">-->
+<!--                                <img [src]="category?.produits[0]?.image || 'assets/images/logos/logo.jpg'"-->
+<!--                                    style="width: 100%;" />-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="info-info">-->
+<!--                            <h4 class="title-cat">-->
+<!--                                <span [innerHTML]="category.nom"></span>-->
+<!--                            </h4>-->
+<!--                            <div class="desc-cat" style="text-align: left;">{{ category?.produits.length }}-->
+<!--                                Variétés-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
                 <span class="btn-control control-right" (click)="scrollCategories('right')"><i
                         class="bi bi-chevron-right" aria-hidden="true"></i></span>
             </div>
@@ -182,22 +182,22 @@
                             </div>
                         </div>
                         <div class="select-user my-3">
-                            <div class="justify-content-between d-flex">
-                                <div class="col-md-11">
-                                    <ng-select id="produit" [(ngModel)]="client">
-                                        <ng-option>--Sélectionner un client--</ng-option>
-                                        <ng-option *ngFor="let c of clients" [value]="c.id">
-                                            {{c.fullName}}
-                                        </ng-option>
-                                    </ng-select>
-                                </div>
-                                <div class="col-md-1">
-                                    <button type="button" class="btn btn-primary" (click)="type = 'user'"
-                                        style="width: 100%; padding: 10px;">
-                                        <i class="bi bi-plus-circle" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </div>
+<!--                            <div class="justify-content-between d-flex">-->
+<!--                                <div class="col-md-11">-->
+<!--                                    <ng-select id="produit" [(ngModel)]="client">-->
+<!--                                        <ng-option>&#45;&#45;Sélectionner un client&#45;&#45;</ng-option>-->
+<!--                                        <ng-option *ngFor="let c of clients" [value]="c.id">-->
+<!--                                            {{c.fullName}}-->
+<!--                                        </ng-option>-->
+<!--                                    </ng-select>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-1">-->
+<!--                                    <button type="button" class="btn btn-primary" (click)="type = 'user'"-->
+<!--                                        style="width: 100%; padding: 10px;">-->
+<!--                                        <i class="bi bi-plus-circle" aria-hidden="true"></i>-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                         <div class="row">
                             <div class="calculator col-md-6">
@@ -234,18 +234,18 @@
 
                                 <div>
                                     <h6 class="text-center card-header">Mode de Paiement</h6>
-                                    <div *ngIf="(modePayments && modePayments[0])"
-                                        class="mode-payment justify-content-center">
-                                        <div *ngFor="let modePayment of modePayments" class="cat d-flex float-left"
-                                            [ngClass]="{'selected': selectedModePayment === modePayment.value}"
-                                            (click)="selectedModePayment = modePayment.value">
-                                            <div class="info-info">
-                                                <h4 class="title-cat">
-                                                    <span [innerHTML]="modePayment.titre"></span>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
+<!--                                    <div *ngIf="(modePayments && modePayments[0])"-->
+<!--                                        class="mode-payment justify-content-center">-->
+<!--                                        <div *ngFor="let modePayment of modePayments" class="cat d-flex float-left"-->
+<!--                                            [ngClass]="{'selected': selectedModePayment === modePayment.value}"-->
+<!--                                            (click)="selectedModePayment = modePayment.value">-->
+<!--                                            <div class="info-info">-->
+<!--                                                <h4 class="title-cat">-->
+<!--                                                    <span [innerHTML]="modePayment.titre"></span>-->
+<!--                                                </h4>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
                             </div>
                         </div>
@@ -277,9 +277,9 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="row">
-                    <app-commande [isProforma]="isProforma"></app-commande>
-                </div>
+<!--                <div class="row">-->
+<!--                    <app-commande [isProforma]="isProforma"></app-commande>-->
+<!--                </div>-->
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary mr-2" (click)="closeModal()">
@@ -288,9 +288,9 @@
             </div>
         </div>
 
-        <app-add-user *ngIf="type === 'user'" [isClient]="true" (continueAction)="loadData()"></app-add-user>
+<!--        <app-add-user *ngIf="type === 'user'" [isClient]="true" (continueAction)="loadData()"></app-add-user>-->
 
     </ng-template>
 </main>
 
-<app-spinner *ngIf="loading" [loading]="loading"></app-spinner>
+<!--<app-spinner *ngIf="loading" [loading]="loading"></app-spinner>-->

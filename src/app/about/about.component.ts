@@ -1,7 +1,8 @@
 import { Component, } from '@angular/core';
 import { DataRestService } from '../service/data-rest.service';
 @Component({
-  templateUrl: './about.component.html'
+  templateUrl: './about.component.html',
+  standalone : true
 })
 export class AboutComponent {
   constructor(private dataRestService: DataRestService) {
