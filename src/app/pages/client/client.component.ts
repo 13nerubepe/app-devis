@@ -28,6 +28,17 @@ export class ClientComponent {
   mpForm!: FormGroup;
   user: any;
 
+  first_name = '';
+
+  last_name = '';
+
+  email = '';
+
+  phone = '';
+
+  message = '';
+
+
   grades = [
     { titre: "Administrateur", value: 50 },
     { titre: "Directeur des études", value: 40 },
